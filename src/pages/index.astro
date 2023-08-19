@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Welcome to Astro." boosted="true">
+	<h1 class="mb-5">Welcome to <span class="text-gradient">Astro with HTMX</span></h1>
+	<p class="instructions">
+		<strong>Experiment:</strong> Blend Astro with HTMX. The theory is that using Astro for Templating, and HTMX for interaction, you can get the best of both worlds.
+		<span class="mt-4 block">The main layout uses the <code>hx-boost</code> param to blend the MPA benefits of Astro with the modern browser features of HTMX.</span>
+	</p>
+
+	<ul role="list" class="link-card-grid">
+		<Card
+			href="/demos"
+			title="Demos"
+			body="Check out the HTMX Demos page to see a little of what's possible."
+		/>
+		<Card
+			href="https://docs.astro.build/"
+			title="Astro Documentation"
+			body="Learn how Astro works and explore the official API docs."
+		/>
+		<Card
+			href="https://htmx.org/docs/"
+			title="HTMX Documentation"
+			body="Learn what HTMX is and how it works."
+		/>
+		<Card
+			href="https://tailwindcss.com/"
+			title="Tailwind CSS"
+			body="This app uses Tailwind, because it's perfect in every way."
+		/>
+	</ul>
+</Layout>

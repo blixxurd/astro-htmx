@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Welcome to Astro." boosted="false">
+	<h1 class="mb-5 text-center text-3xl">HTMX <span class="text-gradient">Demo Page</span></h1>
+    <p class="instructions">If you clicked here from the homepage, you already got a demo via <code>hx-boost</code>.<br> Congrats 🎉. Now click the button.</p>
+    <div class="text-center">
+        <button 
+            type="button" 
+            class="cool-button bg-purple-600 hover:bg-purple-700 p-2 px-5 rounded-lg"
+            hx-get="/partials/test" 
+            hx-swap="outerHTML"
+        >
+            Click Me
+        </button>
+    </div>
+</Layout>
+
+<style>
+
+</style>
